@@ -12,17 +12,23 @@ public class Player : MonoBehaviour
     Rigidbody2D rb ; 
     Camera mainCamera;
     bool isFacingRight = true; // Indique si le joueur est tourné vers la droite
-
+    private Animator animator ;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
         mainCamera = Camera.main; 
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        movement = Input.GetAxis("Horizontal") * movementSpeed; 
+        movement = Input.GetAxis("Horizontal") * movementSpeed;
+
+        
+        {
+            
+        }
 
         // Vérifie si le joueur doit être retourné
         if (movement > 0 && !isFacingRight)
@@ -76,7 +82,19 @@ public class Player : MonoBehaviour
     }
 
     
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Plateform"))
+        {
+            animator.Play("PlayerAnimation");
+        }
 
+    }
+
+    public void OnLandingAnimationEnd()
+    {
+        animator.Play("Idle");
+    }
     // Méthode pour vérifier si le joueur est sorti de l'écran par le bas
     bool IsOutOfScreen()
     {
