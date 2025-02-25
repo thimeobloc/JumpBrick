@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float movementSpeed = 10f ; 
     Rigidbody2D rb ; 
     Camera mainCamera;
+    bool isFacingRight = true; // Indique si le joueur est tourné vers la droite
+
 
     void Start()
     {
@@ -22,9 +24,38 @@ public class Player : MonoBehaviour
     {
         movement = Input.GetAxis("Horizontal") * movementSpeed; 
 
+        // Vérifie si le joueur doit être retourné
+        if (movement > 0 && !isFacingRight)
+        {
+            Flip();
+        }
+        else if (movement < 0 && isFacingRight)
+        {
+            Flip();
+        }
+
+        // Gère le passage d'un bord à l'autre
+        WrapAroundScreen();
+
         if (IsOutOfScreen())
         {
             Die(); // Appelle la méthode de mort
+        }
+    }
+
+    // Vérifie si le joueur sort de l'écran et le téléporte de l'autre côté
+    void WrapAroundScreen()
+    {
+        float screenLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        float screenRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+
+        if (transform.position.x > screenRight) // Sortie à droite
+        {
+            transform.position = new Vector3(screenLeft, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x < screenLeft) // Sortie à gauche
+        {
+            transform.position = new Vector3(screenRight, transform.position.y, transform.position.z);
         }
     }
 
@@ -34,6 +65,17 @@ public class Player : MonoBehaviour
         velocity.x = movement ;  
         rb.velocity = velocity; 
     }
+
+    // Retourne le joueur horizontalement
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1; // Inverse l'axe X
+        transform.localScale = scale;
+    }
+
+    
 
     // Méthode pour vérifier si le joueur est sorti de l'écran par le bas
     bool IsOutOfScreen()
