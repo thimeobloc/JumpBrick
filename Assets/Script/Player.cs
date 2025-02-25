@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     Camera mainCamera;
     bool isFacingRight = true; // Indique si le joueur est tourné vers la droite
     private Animator animator ;
+    public bool hasUsedBonus = false;  // Indique si le joueur a déjà utilisé le bonus
+    public float bonusJumpForce = 20f;  // Force du saut lors de l'utilisation du bonus
+
 
 
     void Start()
@@ -26,10 +29,6 @@ public class Player : MonoBehaviour
     {
         movement = Input.GetAxis("Horizontal") * movementSpeed;
 
-        
-        {
-            
-        }
 
         // Vérifie si le joueur doit être retourné
         if (movement > 0 && !isFacingRight)
@@ -89,11 +88,44 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Plateform"))
-        {
-            animator.Play("PlayerAnimation");
+        {   
+            //Debug.Log("Bonus utilisé ?  ... " + hasUsedBonus); 
+            // Réinitialise l'utilisation du bonus lorsque le joueur atterrit sur une plateforme
+            hasUsedBonus = false;
+            // animator.Play("PlayerAnimation");
         }
-
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Vérifie si l'objet en collision est un Bonus et si le joueur n'a pas encore utilisé de bonus
+        if (collision.gameObject.CompareTag("Bonus") && !hasUsedBonus)
+        {
+            Bonus bonus = collision.gameObject.GetComponent<Bonus>();  // Récupère le script Bonus de l'objet
+
+            if (bonus != null && bonus.isHighJumpBonus)  // Si c'est un bonus HighJump
+            {   
+                //Debug.Log("Bonus HighJump détecté !");
+                hasUsedBonus = true;  // Le bonus a été utilisé
+
+                // Applique un saut très haut
+                Rigidbody2D rb = GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    Vector2 velocity = rb.velocity;
+                    velocity.y = bonusJumpForce;  // Applique une grande force de saut
+                    rb.velocity = velocity;
+                    //Debug.Log("Force de saut appliquée : " + velocity.y);
+                }
+
+                // Détruit l'objet bonus après l'avoir récupéré
+                Destroy(collision.gameObject); 
+                //Debug.Log("Bonus détruit après récupération.");
+            }
+        }
+    }
+
 
     public void OnLandingAnimationEnd()
     {

@@ -8,6 +8,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject greenPlatformPrefab;  // Normale
     public GameObject bluePlatformPrefab;   // Boost
     public GameObject redPlatformPrefab;    // Mobile
+     public GameObject bonusPrefab;       // Bonus Jetpack 
     public int maxPlatforms = 10; // Nombre max de plateformes visibles
     public float levelWidth = 1.18f;
     public float minY = 0.2f;
@@ -56,6 +57,8 @@ public class LevelGenerator : MonoBehaviour
         GameObject platform = Instantiate(GetRandomPlatform(), spawnPosition, Quaternion.identity);
         platforms.Add(platform);
 
+        TrySpawnBonus(platform, spawnPosition); // Inseration potentiel du bonus 
+
         highestY = spawnPosition.y;
     }
 
@@ -79,6 +82,17 @@ public class LevelGenerator : MonoBehaviour
         if (random < 6) return greenPlatformPrefab;   // 60% chance
         if (random < 8) return bluePlatformPrefab;    // 20% chance
         return redPlatformPrefab;                     // 20% chance
+    }
+
+    void TrySpawnBonus(GameObject platform, Vector3 position)
+    {
+        float bonusChance = Random.Range(0f, 1f); // Probabilité entre 0 et 1
+
+        if (bonusChance < 0.02f) // Seulement 2% de chance de spawn
+        {
+            Vector3 bonusPosition = position + Vector3.up * 0.5f; // Légèrement au-dessus de la plateforme
+            Instantiate(bonusPrefab, bonusPosition, Quaternion.identity);
+        }
     }
     
 }
