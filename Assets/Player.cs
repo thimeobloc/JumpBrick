@@ -13,11 +13,13 @@ public class Player : MonoBehaviour
     Camera mainCamera;
     bool isFacingRight = true; // Indique si le joueur est tourné vers la droite
 
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
         mainCamera = Camera.main; 
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
         {
             Die(); // Appelle la méthode de mort
         }
+        
     }
 
     // Vérifie si le joueur sort de l'écran et le téléporte de l'autre côté
@@ -74,9 +77,7 @@ public class Player : MonoBehaviour
         scale.x *= -1; // Inverse l'axe X
         transform.localScale = scale;
     }
-
     
-
     // Méthode pour vérifier si le joueur est sorti de l'écran par le bas
     bool IsOutOfScreen()
     {
@@ -93,5 +94,19 @@ public class Player : MonoBehaviour
         #endif
         //SceneManager.LoadScene("GameOverScene");
         
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("platform"))
+        {
+            animator.Play("playerAnimation");
+        }
+        
+    }
+    
+    public void OnLandingAnimationEnd()
+    {
+        animator.Play("Idle");
     }
 }
