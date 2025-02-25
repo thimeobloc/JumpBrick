@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     bool isFacingRight = true; // Indique si le joueur est tourné vers la droite
     private Animator animator ;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
@@ -52,8 +53,11 @@ public class Player : MonoBehaviour
     // Vérifie si le joueur sort de l'écran et le téléporte de l'autre côté
     void WrapAroundScreen()
     {
-        float screenLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
-        float screenRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+       // float screenLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        // float screenRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+
+        float screenLeft = -0.5f; 
+        float screenRight = 0.5f; 
 
         if (transform.position.x > screenRight) // Sortie à droite
         {

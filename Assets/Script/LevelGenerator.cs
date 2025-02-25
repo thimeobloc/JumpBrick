@@ -24,6 +24,7 @@ public class LevelGenerator : MonoBehaviour
 
         for (int i = 0; i < maxPlatforms; i++)
         {
+            
             spawnPosition.y += Random.Range(minY, maxY);
             spawnPosition.x = Random.Range(-levelWidth / 2, levelWidth / 2);
 
