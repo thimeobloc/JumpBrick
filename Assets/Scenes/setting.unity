@@ -769,7 +769,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 704197798}
-  visible: 0
   DResolution: {fileID: 369135096}
 --- !u!114 &326209601
 MonoBehaviour:
@@ -1800,7 +1799,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1161868821}
+      - m_Target: {fileID: 326209593}
         m_TargetAssemblyTypeName: backbutton, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1

@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6d6714d-9c70-4b70-b54a-13d2e64a718d" name="Changes" comment="" />
+    <list default="true" id="d6d6714d-9c70-4b70-b54a-13d2e64a718d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NoBanJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoBanJump/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64/lib_burst_generated.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/Plugins/x86_64/lib_burst_generated.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/Plugins/x86_64/lib_burst_generated.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/app.info" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/app.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/boot.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/globalgamemanagers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/globalgamemanagers.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/globalgamemanagers.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/globalgamemanagers.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/level0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/level1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/level2" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/level2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/resources.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/resources.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/resources.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets0.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets0.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets0.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets1.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets1.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets2.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets2.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets2.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/JumpBrick_Data/sharedassets2.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/machine.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/machine.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/settings.map" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/settings.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/2.0/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/machine.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/machine.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/settings.map" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/settings.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.0/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/machine.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/machine.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/settings.map" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/settings.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/4.5/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/browscap.ini" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/browscap.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/config" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/mconfig/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GAME/MonoBleedingEdge/etc/mono/mconfig/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +72,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;credit&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -116,6 +158,7 @@
       <workItem from="1740499794803" duration="1951000" />
       <workItem from="1740557057234" duration="2158000" />
       <workItem from="1740561735230" duration="671000" />
+      <workItem from="1740568134475" duration="311000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class backbutton : MonoBehaviour
 {
     public void Back() {
-        SceneManager.LoadScene("deb");
+        SceneManager.LoadScene("home");
         Debug.Log("back Button Press");
     }
     
