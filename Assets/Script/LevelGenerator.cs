@@ -8,7 +8,9 @@ public class LevelGenerator : MonoBehaviour
     public GameObject greenPlatformPrefab;  // Normale
     public GameObject bluePlatformPrefab;   // Boost
     public GameObject redPlatformPrefab;    // Mobile
-     public GameObject bonusPrefab;       // Bonus Jetpack 
+    public GameObject bonusPrefab;       // Bonus Jetpack 
+     
+    public GameObject malusPrefab;  // Malus 
     public int maxPlatforms = 10; // Nombre max de plateformes visibles
     public float levelWidth = 1.18f;
     public float minY = 0.2f;
@@ -58,6 +60,7 @@ public class LevelGenerator : MonoBehaviour
         platforms.Add(platform);
 
         TrySpawnBonus(platform, spawnPosition); // Inseration potentiel du bonus 
+        TrySpawnMalus(platform, spawnPosition); // Insertion potentiel malus 
 
         highestY = spawnPosition.y;
     }
@@ -88,10 +91,21 @@ public class LevelGenerator : MonoBehaviour
     {
         float bonusChance = Random.Range(0f, 1f); // Probabilité entre 0 et 1
 
-        if (bonusChance < 0.02f) // Seulement 2% de chance de spawn
+        if (bonusChance < 0.05f) // Seulement 5% de chance de spawn
         {
             Vector3 bonusPosition = position + Vector3.up * 0.5f; // Légèrement au-dessus de la plateforme
             Instantiate(bonusPrefab, bonusPosition, Quaternion.identity);
+        }
+    }
+
+    void TrySpawnMalus(GameObject platform, Vector3 position)
+    {
+        float malusChance = Random.Range(0f, 1f);
+
+        if (malusChance < 0.05f) 
+        {
+            Vector3 malusPosition = position + Vector3.up * 0.5f;
+            Instantiate(malusPrefab, malusPosition, Quaternion.identity);
         }
     }
     

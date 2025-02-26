@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
     private Animator animator ;
     public bool hasUsedBonus = false;  // Indique si le joueur a déjà utilisé le bonus
     public float bonusJumpForce = 20f;  // Force du saut lors de l'utilisation du bonus
+    
+    private bool areControlsInverted = false;  // Indique si les contrôles sont inversés
+    private float inversionTimer = 0f;  // Timer pour la durée de l'inversion
+    private SpriteRenderer spriteRenderer;  // Référence au SpriteRenderer
+
 
 
 
@@ -24,11 +29,37 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); 
         mainCamera = Camera.main; 
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        movement = Input.GetAxis("Horizontal") * movementSpeed;
+        
+        // Si les contrôles sont inversés, on décrémente le timer
+        if (areControlsInverted)
+        {
+            inversionTimer -= Time.deltaTime;  // Soustrait le temps écoulé depuis le dernier frame
+            // Change la couleur du sprite pendant l'inversion
+            spriteRenderer.color = Color.red;  // Modifie la couleur en rouge pendant l'inversion
+
+
+            // Si le timer est arrivé à zéro ou moins, on rétablit les contrôles
+            if (inversionTimer <= 0f)
+            {
+                areControlsInverted = false;  // Réinitialise l'inversion des contrôles
+                spriteRenderer.color = Color.white;  // Remet la couleur normale
+                Debug.Log("Les contrôles sont rétablis.");
+            }
+        }
+
+        // Vérifie si les contrôles sont inversés et ajuste la valeur de movement en conséquence
+        float movementInput = Input.GetAxis("Horizontal");
+        if (areControlsInverted)  // Si les contrôles sont inversés
+        {
+            movementInput = -movementInput;  // Inverse le mouvement
+        }
+
+        movement = movementInput * movementSpeed;
 
 
         // Vérifie si le joueur doit être retourné
@@ -53,6 +84,15 @@ public class Player : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("game-over");
         }
     }
+
+
+    public void InvertControls(float duration)
+    {
+        areControlsInverted = true;  // Active l'inversion des contrôles
+        inversionTimer = duration;   // Définit la durée de l'inversion
+        Debug.Log("Les contrôles sont inversés pendant " + duration + " secondes.");
+    }
+
 
     // Vérifie si le joueur sort de l'écran et le téléporte de l'autre côté
     void WrapAroundScreen()
