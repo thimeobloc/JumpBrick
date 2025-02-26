@@ -47,6 +47,10 @@ public class Player : MonoBehaviour
         if (IsOutOfScreen())
         {
             Die(); // Appelle la méthode de mort
+
+            FindObjectOfType<ScoreManager>().SaveHighscore();
+            FindObjectOfType<ScoreManager>().SaveFinalScore();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("game-over");
         }
     }
 
