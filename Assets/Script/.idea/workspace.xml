@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baadee01-6e63-434b-b12f-3ead412b2723" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../script.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +18,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GOScore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ScoreManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2tZScCiNDWzi0s4qGAcqjViJDpG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,6 +33,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "merge-score-game",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -50,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740558181491</updated>
       <workItem from="1740558182950" duration="4286000" />
+      <workItem from="1740562695061" duration="1341000" />
     </task>
     <servers />
   </component>

@@ -29,15 +29,23 @@ public class ScoreManager : MonoBehaviour
             scoreText.text = "Score : " + score.ToString();
         }
     }
+    
     public void SaveHighscore()
     {
         if (score > highscore)
         {
             highscore = score;
             PlayerPrefs.SetInt("Highscore", highscore);
-            PlayerPrefs.Save();
         }
+        PlayerPrefs.Save();
         highscoreText.text = "Highscore : " + highscore.ToString();
     }
     
+    public void SaveFinalScore()
+    {
+        PlayerPrefs.SetInt("LastScore", score);
+        PlayerPrefs.Save();
+        Debug.Log("Score Final sauvegardé : " + score);
+    }
+
 }
