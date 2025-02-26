@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     // Variables pour le deuxième joueur
     public GameObject player2Prefab; // Le prefab du deuxième joueur
     private GameObject player2; // Instance du deuxième joueur
-    private bool isMultiplayerActive = false;  // Indique si le mode multijoueur est activé
+    public bool isMultiplayerActive = false;  // Indique si le mode multijoueur est activé
 
 
 

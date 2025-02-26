@@ -1360,6 +1360,7 @@ MonoBehaviour:
   bonusJumpForce: 20
   horizontalInputAxis: Horizontal
   player2Prefab: {fileID: 1669211812}
+  isMultiplayerActive: 0
 --- !u!61 &1283764815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1392,7 +1393,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023047015, y: -0.06279284}
+  m_Offset: {x: -0.023047015, y: -0.068342194}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1403,7 +1404,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08371793, y: 0.02455673}
+  m_Size: {x: 0.08371793, y: 0.016787559}
   m_EdgeRadius: 0
 --- !u!50 &1283764816
 Rigidbody2D:
@@ -1701,6 +1702,7 @@ MonoBehaviour:
   bonusJumpForce: 20
   horizontalInputAxis: Horizontal2
   player2Prefab: {fileID: 0}
+  isMultiplayerActive: 0
 --- !u!61 &1669211814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1733,7 +1735,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03043903, y: -0.0997617}
+  m_Offset: {x: -0.03043903, y: -0.10831234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1744,7 +1746,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12396591, y: 0.038736776}
+  m_Size: {x: 0.12396591, y: 0.02163551}
   m_EdgeRadius: 0
 --- !u!50 &1669211815
 Rigidbody2D:
@@ -2049,6 +2051,7 @@ MonoBehaviour:
   redPlatformPrefab: {fileID: 385278142}
   bonusPrefab: {fileID: 1290236179}
   malusPrefab: {fileID: 585536444}
+  playerScript: {fileID: 0}
   maxPlatforms: 10
   levelWidth: 1
   minY: 0.2

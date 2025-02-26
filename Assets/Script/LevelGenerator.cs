@@ -8,9 +8,12 @@ public class LevelGenerator : MonoBehaviour
     public GameObject greenPlatformPrefab;  // Normale
     public GameObject bluePlatformPrefab;   // Boost
     public GameObject redPlatformPrefab;    // Mobile
+    
     public GameObject bonusPrefab;       // Bonus Jetpack 
-     
     public GameObject malusPrefab;  // Malus 
+
+    public Player playerScript; 
+    
     public int maxPlatforms = 10; // Nombre max de plateformes visibles
     public float levelWidth = 1.18f;
     public float minY = 0.2f;
@@ -59,7 +62,18 @@ public class LevelGenerator : MonoBehaviour
         GameObject platform = Instantiate(GetRandomPlatform(), spawnPosition, Quaternion.identity);
         platforms.Add(platform);
 
-        TrySpawnBonus(platform, spawnPosition); // Inseration potentiel du bonus 
+        // Si le mode multijoueur est activé, ne pas générer de bonus
+        if (playerScript.isMultiplayerActive)
+        {
+            Debug.Log("Mode multijoueur activé - Pas de bonus générés.");
+        }
+        else
+        {
+            // Si en mode solo, essayer de générer un bonus
+            TrySpawnBonus(platform, spawnPosition); // Insertion potentiel du bonus
+        }
+
+        // Essayer de générer un malus quel que soit le mode
         TrySpawnMalus(platform, spawnPosition); // Insertion potentiel malus 
 
         highestY = spawnPosition.y;
@@ -89,6 +103,12 @@ public class LevelGenerator : MonoBehaviour
 
     void TrySpawnBonus(GameObject platform, Vector3 position)
     {
+        // Seuls les joueurs solo peuvent obtenir des bonus
+        if (playerScript.isMultiplayerActive)
+        {
+            return; // Ne génère pas de bonus si le mode multijoueur est activé
+        }
+
         float bonusChance = Random.Range(0f, 1f); // Probabilité entre 0 et 1
 
         if (bonusChance < 0.05f) // Seulement 5% de chance de spawn
