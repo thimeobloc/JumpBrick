@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
@@ -140,12 +141,9 @@ public class Player : MonoBehaviour
     void Die()
     {
         Debug.Log("Le joueur est mort !");
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // Arrête le mode Play dans l'éditeur
-        #else
-        Application.Quit(); // Ferme le jeu dans une build
-        #endif
-        //SceneManager.LoadScene("GameOverScene");
-        
+
+        // Charge la scène Game Over
+        SceneManager.LoadScene("game-over");
     }
+
 }
