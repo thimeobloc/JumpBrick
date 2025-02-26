@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {   
-    
+ 
     float movement = 0f ; 
     public float movementSpeed = 10f ; 
     Rigidbody2D rb ; 
@@ -47,6 +47,9 @@ public class Player : MonoBehaviour
         if (IsOutOfScreen())
         {
             Die(); // Appelle la méthode de mort
+            FindObjectOfType<ScoreManager>().SaveHighscore();
+            FindObjectOfType<ScoreManager>().SaveFinalScore();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("game-over");
         }
     }
 
