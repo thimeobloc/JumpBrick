@@ -44,7 +44,7 @@ public class LevelGenerator : MonoBehaviour
             SpawnNewPlatform();
         }
 
-        // Supprimer les plateformes trop basses
+        // Supprimer les plateformes trop basses.
         RemoveOldPlatforms();
     }
 
