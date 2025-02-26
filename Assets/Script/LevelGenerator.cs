@@ -83,8 +83,8 @@ public class LevelGenerator : MonoBehaviour
         int random = Random.Range(0, 10); // Probabilités : 60% verte, 20% bleue, 20% rouge
 
         if (random < 6) return greenPlatformPrefab;   // 60% chance
-        if (random < 8) return bluePlatformPrefab;    // 20% chance
-        return redPlatformPrefab;                     // 20% chance
+        if (random < 9) return bluePlatformPrefab;    // 20% chance
+        return redPlatformPrefab;                     // 10% chance
     }
 
     void TrySpawnBonus(GameObject platform, Vector3 position)

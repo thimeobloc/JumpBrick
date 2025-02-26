@@ -21,6 +21,13 @@ public class Player : MonoBehaviour
     private float inversionTimer = 0f;  // Timer pour la durée de l'inversion
     private SpriteRenderer spriteRenderer;  // Référence au SpriteRenderer
 
+    public string horizontalInputAxis = "Horizontal"; // Input personnalisé pour chaque joueur
+
+
+    // Variables pour le deuxième joueur
+    public GameObject player2Prefab; // Le prefab du deuxième joueur
+    private GameObject player2; // Instance du deuxième joueur
+    private bool isMultiplayerActive = false;  // Indique si le mode multijoueur est activé
 
 
 
@@ -30,11 +37,45 @@ public class Player : MonoBehaviour
         mainCamera = Camera.main; 
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update()
-    {
-        
+    {   
+        // Vérifie si la barre d'espace est pressée pour activer le mode multijoueur
+        if (Input.GetKeyDown(KeyCode.Space) && !isMultiplayerActive)
+        {
+            Debug.Log("Touche SPACE pressée ! Activation du mode multijoueur...");
+            isMultiplayerActive = true;
+
+            // Crée le joueur 2 et positionne le à côté du joueur 1 
+            if (player2Prefab != null)
+            {
+                player2 = Instantiate(player2Prefab, new Vector3(0, transform.position.y + 1, transform.position.z), Quaternion.identity);
+                player2.SetActive(false); // Cache le joueur 2 au départ
+                Debug.Log("Mode multijoueur activé et joueur 2 créé !");
+            }
+            else
+            {
+                Debug.Log("Prefab du joueur 2 non assigné !");
+            }
+        }
+
+        // Si le mode multijoueur est activé et que le joueur 2 est instancié, tu peux le rendre visible
+        if (isMultiplayerActive && player2 != null)
+        {
+            // Appuie sur la barre d'espace pour faire apparaître le joueur 2
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                player2.SetActive(true); // Affiche le joueur 2
+                Debug.Log("Joueur 2 affiché !");
+            }
+
+           
+        }
+    
+
+
         // Si les contrôles sont inversés, on décrémente le timer
         if (areControlsInverted)
         {
@@ -53,7 +94,7 @@ public class Player : MonoBehaviour
         }
 
         // Vérifie si les contrôles sont inversés et ajuste la valeur de movement en conséquence
-        float movementInput = Input.GetAxis("Horizontal");
+        float movementInput = Input.GetAxis(horizontalInputAxis); // Utilisation de l'input personnalisé
         if (areControlsInverted)  // Si les contrôles sont inversés
         {
             movementInput = -movementInput;  // Inverse le mouvement
