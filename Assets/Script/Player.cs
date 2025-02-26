@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {   
-    
+ 
     float movement = 0f ; 
     public float movementSpeed = 10f ; 
     Rigidbody2D rb ; 
