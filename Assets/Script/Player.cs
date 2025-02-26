@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
     {
         areControlsInverted = true;  // Active l'inversion des contrôles
         inversionTimer = duration;   // Définit la durée de l'inversion
-        Debug.Log("Les contrôles sont inversés pendant " + duration + " secondes.");
+        //Debug.Log("Les contrôles sont inversés pendant " + duration + " secondes.");
     }
 
 

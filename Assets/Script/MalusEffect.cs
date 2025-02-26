@@ -10,7 +10,6 @@ public class MalusEffect : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player != null)
         {
-            Debug.Log("Malus activé, inversion des contrôles !");
             player.InvertControls(effectDuration);  // Inverse les contrôles du joueur
             Destroy(gameObject);  // Détruit l'objet malus après qu'il ait été récupéré
         }
