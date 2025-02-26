@@ -12,12 +12,14 @@ public class RedPlatform : MonoBehaviour
 
     void Start()
     {
+        transform.position = new Vector3(0f, this.transform.position.y, this.transform.position.z);
         startPos = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position += Vector3.right * speed * direction * Time.deltaTime;
+          //transform.position  +=  Vector3(direction, this.transform.position.y, this.transform.position.z) * speed *Time.deltaTime ;
 
         if (Mathf.Abs(transform.position.x - startPos.x) > moveRange)
         {
