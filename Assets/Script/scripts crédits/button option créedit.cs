@@ -6,7 +6,7 @@ public class buttonoptioncréedit : MonoBehaviour
 {
     public void OptionCrédit()
     {
-        SceneManager.LoadScene("setting");
+        SceneManager.LoadScene("home");
         Debug.Log("option button pressed");
     }
     
