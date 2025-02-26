@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
         if (IsOutOfScreen())
         {
             Die(); // Appelle la méthode de mort
+            FindObjectOfType<ScoreManager>().SaveHighscore();
         }
     }
 

@@ -14,10 +14,9 @@ public class ScoreManager : MonoBehaviour
     int score = 0;
     int highscore = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = "Score : " + score.ToString();
+        highscore = PlayerPrefs.GetInt("Highscore", 0);
         highscoreText.text = "Highscore : " + highscore.ToString();
     }
 
@@ -26,9 +25,19 @@ public class ScoreManager : MonoBehaviour
         if (player.position.y > highestY)
         {
             highestY = player.position.y;
-            score = Mathf.FloorToInt(highestY); 
+            score = Mathf.FloorToInt(highestY);
             scoreText.text = "Score : " + score.ToString();
         }
     }
-
+    public void SaveHighscore()
+    {
+        if (score > highscore)
+        {
+            highscore = score;
+            PlayerPrefs.SetInt("Highscore", highscore);
+            PlayerPrefs.Save();
+        }
+        highscoreText.text = "Highscore : " + highscore.ToString();
+    }
+    
 }
