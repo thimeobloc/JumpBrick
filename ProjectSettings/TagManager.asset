@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plateform
   - Bonus
+  - Malus
   layers:
   - Default
   - TransparentFX
