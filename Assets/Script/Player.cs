@@ -173,6 +173,10 @@ public class Player : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.collider.TryGetComponent<Player>(out Player component)){
+            Physics2D.IgnoreCollision(component.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+
         if (collision.gameObject.CompareTag("Plateform"))
         {   
             //Debug.Log("Bonus utilisé ?  ... " + hasUsedBonus); 
@@ -185,6 +189,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+    
         // Vérifie si l'objet en collision est un Bonus et si le joueur n'a pas encore utilisé de bonus
         if (collision.gameObject.CompareTag("Bonus") && !hasUsedBonus)
         {

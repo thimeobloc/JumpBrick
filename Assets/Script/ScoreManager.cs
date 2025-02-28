@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void SaveHighscore()
+   public void SaveHighscore()
     {
         if (score > highscore)
         {
@@ -47,5 +47,6 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.Save();
         Debug.Log("Score Final sauvegardé : " + score);
     }
+ 
 
 }
